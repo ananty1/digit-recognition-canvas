@@ -10,6 +10,8 @@ const DigitRecognition = () => {
     const loadModel = async () => {
       // Load the pre-trained MNIST model
       const model = await tf.loadLayersModel('https://raw.githubusercontent.com/ananty1/digit-recognition-canvas/main/src/my_model.json');
+      await tf.loadWeights('https://raw.githubusercontent.com/ananty1/digit-recognition-canvas/main/src/my_model_weights.h5');
+      
     //   const model = await tf.loadLayersModel('https://github.com/google/tfjs-mnist-workshop/blob/master/model/model.json');
     setModel(model);
     };
